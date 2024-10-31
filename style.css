@@ -1,0 +1,138 @@
+html, body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+  }
+  #toolbar{
+    width: 100%;
+    height: auto;
+    font-size: 100%;
+    max-height: 5%;
+    background: #333;
+    color: #AAA;
+    font-family: Arial;
+    user-select: none;
+    border-bottom: 1px solid #fff;
+  }
+  #toolbar > div:not(:last-child){
+    border-right: 1px solid #fff;
+  }
+  #toolbar > div  {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    padding: 2px 5px;
+  }
+  #toolbar > div:not([active]):hover{
+    background: #777;
+    color: #222;
+  }
+  
+  #helperToolbar{
+    width: 100%;
+    height: auto;
+    font-size: 100%;
+    max-height: 5%;
+    background: #0000;
+    color: #0000;
+    font-family: Arial;
+    user-select: none;
+    pointer-events: none;
+  }
+  #helperToolbar > div:not(:last-child){
+    border-right: 1px solid #0000;
+  }
+  #helperToolbar > div {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    padding: 2px 5px;
+  }
+  
+  
+  #helperToolbar > [active]{
+    display: inline-block;
+    background: #333;
+    color: #aaa;
+    height: auto;
+    width: auto;
+    pointer-events:all;
+    border-right: none !important;
+    padding: 0;
+  }
+  #helperToolbar > :not([active]){
+    pointer-events: none;
+  }
+  #toolbar > [active]{
+    background: #aaa;
+    color: #333;
+  }
+  
+  #helperToolbar > [active] > div{
+    padding:2px 5px;
+    text-align: left;
+  }
+  #helperToolbar > [active] > div:not(:last-child){
+    /*border-bottom: 1px solid #fff;*/
+  }
+  #helperToolbar > [active] > div:not([active]):hover{
+    background: #777;
+    color: #222;
+  }
+  #helperToolbar > [active] > div[active]{
+    background: #aaa;
+    color: #333;
+  }
+  
+  #spreadHelper{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #0000;
+    pointer-events: none;
+    top:0;
+    left: 0;
+    z-index: 5;
+    font-family: Arial;
+    user-select: none;
+  }
+  
+  #spreadHelper > div{
+    display: block;
+    position: absolute;
+    background: #333;
+    color: #aaa;
+    height: auto;
+    width: auto;
+    pointer-events:all;
+    border-right: none !important;
+  
+  }
+  #spreadHelper > div > div{
+    padding:2px 5px;
+    text-align: left;
+  }
+  #spreadHelper > div > div:not(:last-child){
+    /*border-bottom: 1px solid #fff;*/
+  }
+  #spreadHelper > div > div:not([active]):hover{
+    background: #777;
+    color: #222;
+  }
+  #spreadHelper > div > div[active]{
+    background: #aaa;
+    color: #333;
+  }
+  
+  #noScript{
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:  column;
+    font-family: Arial;
+    font-size: 5cqh;
+    user-select: none;
+  }
